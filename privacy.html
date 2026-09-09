@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Card Genie — Privacy Policy</title>
+<meta name="description" content="Privacy Policy for Card Genie. Version 2026-09-09.">
+<meta name="color-scheme" content="dark">
+<style>
+  :root {
+    --bg: #0B1017; --surface: #131A24; --line: #26303F;
+    --text: #EDF1F6; --muted: #9AA7B8; --faint: #66748A; --foil: #D9B36C;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--muted);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+  .brand { display: flex; align-items: center; gap: .6rem; font-size: .95rem; color: var(--foil); text-decoration: none; letter-spacing: .01em; }
+  h1 { color: var(--text); font-size: 2rem; line-height: 1.2; margin: 1.75rem 0 .5rem; letter-spacing: -.02em; }
+  .effective { color: var(--faint); font-size: .85rem; margin: 0; }
+  h2 { color: var(--text); font-size: 1.1rem; line-height: 1.35; margin: 2.75rem 0 .75rem; letter-spacing: -.01em; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1.25rem; padding: 1rem 1.25rem 1rem 2.25rem; background: var(--surface); border-radius: .6rem; list-style: none; }
+  li { position: relative; margin: 0 0 .75rem; }
+  li:last-child { margin-bottom: 0; }
+  li::before { content: "•"; color: var(--foil); position: absolute; left: -1rem; }
+  strong { color: var(--text); font-weight: 600; }
+  nav { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-size: .875rem; }
+  nav a { color: var(--faint); }
+  a { color: var(--foil); }
+  @media (max-width: 30rem) { .wrap { padding: 2rem 1.25rem 4rem; } h1 { font-size: 1.6rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="./">✦ Card Genie</a></header>
+<h1>Privacy Policy</h1>
+<p class="effective">Version 2026-09-09. Effective on the date of first store release.</p>
+<h2>The short version</h2>
+<p>Card Genie runs on your device. We do not run a server that stores anything about you, and there is no account on any machine of ours to hold.</p>
+<p>Your cards, your questions and your answers stay on your phone. Signing in is optional, changes none of that, and exists so the app can greet you by name and so you can move your wallet to a new phone.</p>
+<p>We never ask for a card number, and there is no field in the app for one.</p>
+<p>We do not sell your information, share it for advertising, build a profile of you, or track you across other apps and websites. Those are not policy positions we could quietly reverse; there is no code in the app capable of any of them.</p>
+<p>The rest of this document is the detail behind those four paragraphs, written out at the length the subject deserves. Nothing later contradicts anything here.</p>
+<h2>Who this policy is from, and what it covers</h2>
+<p>Card Genie is an independent application. This policy is written by the person who makes it and describes the behaviour of the Card Genie mobile application on iOS and Android, and of the browser build of the same application.</p>
+<p>It covers what the application does on your device and what it sends over a network. It does not cover, and cannot cover, what Apple, Google, or any other company does with information you give them directly — including when you sign in with an account they hold. Those relationships are between you and them, under their own policies, and are described here only so you can see where the boundary is.</p>
+<p>If any statement in this document is wrong, that is a defect and should be reported like one, at github.com/shahp-08/card-genie.</p>
+<h2>What the app stores on your device</h2>
+<p>All of this is kept in the application’s private storage — AsyncStorage on iOS and Android, localStorage in the browser build — and nowhere else. None of it is transmitted to us, because there is no destination to transmit it to.</p>
+<ul>
+<li>Your wallet: which cards you added, by product name (for example “Chase Sapphire Preferred”); whether each is active; any nickname you gave it; when you told us the account was opened; and how much you have told the app you have spent against a bonus cap.</li>
+<li>Your account, if you made one: the name you typed, an emoji if you picked one, and — if you signed in — which provider vouched for you, the opaque account identifier they returned, and the display name and email address they shared. Apple’s “Hide My Email” relay address is a normal and expected value here.</li>
+<li>Your preferences: how you value points (cash, transfer, or a custom cents-per-point figure), and which valuation the app ranks by.</li>
+<li>Your merchant reports: when the app did not recognise a store and you told it what kind of place it is, the store name you typed and the category you chose, with the date.</li>
+<li>Your offers: bank offers you typed in — merchant, value, minimum spend, expiry, notes — and whether and how much you marked used.</li>
+<li>Recent questions: the last 20 things you asked, with the answer’s card name and value, so the For You screen can show them.</li>
+<li>Diagnostics, if enabled: a short log of application errors with amounts, quoted text, merchant names, email addresses and long digit runs removed before they are written, and a buffer of usage events containing counts and catalog identifiers only.</li>
+<li>A cached copy of the kill-switch list described below, which is public information identical for every user and says nothing about you.</li>
+</ul>
+<h2>What the app never stores</h2>
+<p>This list is exhaustive and structural rather than aspirational. There is no screen that asks for any of it, no field in any stored record that could hold it, and the backup export refuses to write anything whose field name resembles one.</p>
+<ul>
+<li>Card numbers, in full or in part. The app identifies cards by product name and could not use a number if you gave it one.</li>
+<li>Expiry dates, security codes, CVV or CVC values, or PINs.</li>
+<li>Bank usernames, passwords, or any credential for any financial institution.</li>
+<li>Statements, transactions, balances, or any data from your bank. The app has no bank connection and no mechanism to obtain one.</li>
+<li>Authentication tokens from any sign-in provider. The record we keep of a sign-in has fields for the provider, an opaque identifier, a name, an email address and a date, and nothing else; anything further a provider returns is discarded before it reaches storage.</li>
+<li>Your location, at any precision. The app requests no location permission.</li>
+<li>Your contacts, photos, camera, microphone, calendar, health data or files.</li>
+<li>Advertising identifiers, including the iOS Identifier for Advertisers. The app does not request tracking permission because it has nothing to do with it.</li>
+<li>Biometric data of any kind.</li>
+</ul>
+<h2>Signing in</h2>
+<p>Signing in is entirely optional and every feature of the application works without it. If you never sign in, nothing in this section applies to you.</p>
+<p>When you choose to sign in, we ask Apple or Google to confirm who you are. They hand back an identifier that is unique to you and to this application and is meaningless anywhere else, along with whatever name and email address you chose to share at that moment. We keep those on your device.</p>
+<p>We never receive an authentication token, and the application has no code that could store one. In the Google flow, a token is used to make a single request for your name, email address and identifier, and is discarded immediately afterwards; it is never written to storage. In the Apple flow the identity token and authorization code are ignored outright, because they exist for a server to verify and there is no server here.</p>
+<p>No sign-in information is sent to us, because there is no “us” to send it to. Your sign-in is a relationship between you and Apple or Google, governed by their privacy policies. Apple’s “Hide My Email” is fully supported: if you use it, we receive a relay address and never learn your real one, and the application works identically either way.</p>
+<p>Signing out removes the identifier and the provider’s name and email from your device while keeping your cards, your typed name and your preferences. It is not the same as deleting, which is described below.</p>
+<p>We do not use a sign-in to link you across devices, because we have nowhere to do that. Two devices signed into the same account do not know about each other.</p>
+<h2>Backups you make</h2>
+<p>You can export a backup file at any time, whether or not you have an account. It contains your wallet, your preferences and your profile name — which is to say, the list of which financial products you hold. It contains no card numbers, no credentials and no tokens, because none of those exist anywhere in the application.</p>
+<p>The file goes wherever you send it. We never receive it and cannot recover one you lose. Once it leaves the application it is governed by whatever service you put it on, not by this policy.</p>
+<p>The file is not encrypted. That is a deliberate choice rather than an oversight: a passphrase box producing cryptography we could not stand behind would be worse than none, and the places people realistically keep such a file — Files, iCloud Drive, Google Drive, a mail account — encrypt it at rest already. What we owe you instead is an accurate sentence about what is in it, which is the paragraph above. If that list is sensitive to you, keep the file somewhere you consider secure.</p>
+<p>Restoring a backup replaces what is on the device rather than merging with it, and the application tells you so before it does anything.</p>
+<h2>What the app sends over the network</h2>
+<p>This is the complete list. The application makes no other outbound request of its own, and every entry here is checked against the code by an automated test that fails if a module can make a request this section does not describe.</p>
+<ul>
+<li>Kill-switch list (automatic, only in a build configured with a feed address): once at launch the application may fetch a small public JSON file listing cards we have switched off — for example because we found a rate to be wrong. The request carries no identifier for you, no wallet and no question; it is the same file for everyone, fetched the way any static file is. What comes back can only ever stop the application using a card, never change a rate or a number.</li>
+<li>Store lookup (optional, and off unless the build includes a search key): when you name a store the application does not recognise, it may send the store name you typed — nothing else — to Brave Search to find out how that store is categorised. Not your amount, not your cards, not your question, not any identifier for you. The result is always shown to you as unconfirmed and you are asked to confirm it. Brave’s own privacy policy governs that request.</li>
+<li>Signing in with Apple (only when you tap it): handled by Apple’s own system sheet. The application receives the result; it does not send Apple anything about you beyond the fact that this application is asking.</li>
+<li>Signing in with Google (only when you tap it): opens Google’s sign-in page in a browser, then makes two requests to Google — one to exchange the authorization code for a token, one to read your name, email address and account identifier. Both go to Google and nowhere else. No information about your cards, your questions or your usage is included in either.</li>
+<li>Usage statistics (optional, off by default, and no collector exists in the released application): if a collector address is ever configured and you turn the switch on, the application posts aggregated counts only — never individual events, never what you typed, which store, or how much.</li>
+</ul>
+<p>The application loads no remote fonts, images, scripts, stylesheets or advertising. It contains no analytics SDK, no advertising SDK, no attribution SDK, no crash-reporting service and no tag manager. It does not contact a language-model provider: the parser and the sentences it writes are rules and templates running offline on your device.</p>
+<h2>What we do not do</h2>
+<p>Stated plainly, because most policies bury these and because in this case each is a statement about code that does not exist rather than a promise about behaviour we could change quietly.</p>
+<ul>
+<li>We do not sell your personal information, and never have. We have no mechanism to do so and no relationship with any data broker, advertiser or analytics vendor.</li>
+<li>We do not share your personal information for cross-context behavioural advertising, and we do not serve advertising of any kind.</li>
+<li>We do not build a profile of you, score you, or make any automated decision that produces a legal or similarly significant effect. The application ranks your own cards for a purchase you describe, on your device, and that is the whole of it.</li>
+<li>We do not track you across other applications or websites, and the application requests no permission that would allow it.</li>
+<li>We do not use cookies, web beacons, tracking pixels, fingerprinting, or any similar technology. The browser build uses localStorage to hold your own wallet on your own device and nothing else.</li>
+<li>We do not buy information about you from anyone.</li>
+<li>We do not have a mailing list and will not email you. There is no address of yours we hold to email.</li>
+</ul>
+<h2>Legal bases for processing, for readers in the European Economic Area and the United Kingdom</h2>
+<p>Under the General Data Protection Regulation, processing needs a lawful basis. Because the application processes your information on your own device and transmits none of it to us, our role as a controller is unusually narrow. Where the framework applies:</p>
+<ul>
+<li>Storing your wallet, preferences and history on your device: necessary for the performance of the service you asked for, under Article 6(1)(b). Without it the application cannot do the one thing it exists to do.</li>
+<li>Signing in, and keeping the identifier a provider returns: your consent, under Article 6(1)(a), given by tapping the button. It is optional, it can be withdrawn by signing out, and withdrawing it costs you no functionality.</li>
+<li>The store lookup, in builds where it is enabled: our legitimate interest in identifying how a merchant is categorised, under Article 6(1)(f), balanced by sending only the store name and no identifier for you.</li>
+<li>Usage statistics, if a collector ever exists and you switch them on: your consent, under Article 6(1)(a), given by that switch and withdrawn by turning it off.</li>
+</ul>
+<p>We do not process special categories of personal data under Article 9, and we do not carry out automated decision-making within the meaning of Article 22.</p>
+<h2>How long information is kept</h2>
+<p>Information stays on your device until you remove it, the application is uninstalled, or your device’s storage is cleared. There is no retention schedule of ours because there is no copy of ours.</p>
+<p>Recent questions are capped at the last 20 and older ones fall off automatically. Typed offers and merchant reports are capped in number, and the oldest are dropped when the cap is reached. Diagnostics are a short rolling buffer.</p>
+<p>We keep nothing after you delete it, because we never had it. If you sign in, Apple or Google keep their own record that you used this application to sign in; ending that is a matter for their account settings, and both provide a way to revoke an application’s access.</p>
+<h2>Security</h2>
+<p>Your information sits in the application’s private storage, protected by the operating system’s own sandboxing and by whatever device encryption and lock screen you have enabled. On a modern iPhone or Android device with a passcode set, that is meaningful protection; on a device with no lock and no encryption, it is not, and the same is true of every application on it.</p>
+<p>Every network request the application makes is over HTTPS. The application declares no cleartext-traffic exception on either platform.</p>
+<p>The most substantial security property of this application is architectural rather than technical: we hold nothing, so there is no database of ours to breach, no credential of yours for anyone to steal from us, and no incident we could have that would expose your information. No amount of security engineering on a server is as protective as not having one.</p>
+<p>No system is perfectly secure. If you find a vulnerability, please report it as described in the project’s SECURITY document rather than disclosing it publicly first.</p>
+<h2>Your choices</h2>
+<ul>
+<li>Use the application without an account. Nothing is withheld from you if you do.</li>
+<li>Sign out at any time from the Account screen, which removes the provider identifier from your device.</li>
+<li>Turn usage statistics on or off in Diagnostics. They are off by default.</li>
+<li>Export a backup before you delete anything, if you want to keep your own copy.</li>
+<li>Delete everything from inside the application, as described below.</li>
+<li>Uninstall. On iOS and Android that removes the application’s private storage with it.</li>
+</ul>
+<h2>Deleting your information</h2>
+<p>Account → Delete everything removes all of it: your account, your wallet, your offers, your history, your merchant reports and your diagnostics. It happens immediately, on the device, because the device is the only place any of it is.</p>
+<p>There is no request to make, no queue to wait in, and nothing of yours left with us afterwards. We mention that not to boast but because “we will delete your data within 30 days” is the sentence most applications have to write here, and it is not true of this one.</p>
+<p>Uninstalling the application does the same thing. In the browser build, clearing site data for the application’s origin does the same thing.</p>
+<p>If you signed in, revoking this application’s access in your Apple ID or Google account settings ends that relationship on their side as well.</p>
+<h2>Your rights in the European Economic Area, the United Kingdom and Switzerland</h2>
+<p>If the GDPR or the UK GDPR applies to you, you have the rights to access your personal data, to have it corrected, to have it erased, to restrict or object to its processing, to data portability, and to withdraw consent at any time.</p>
+<p>The unusual thing about this application is that you can exercise nearly all of them yourself, immediately, without asking us and without proving who you are — because your data is in your hands rather than ours. Access and portability are the backup export. Correction is editing your wallet or your name. Erasure is Delete everything. Withdrawing consent is signing out or turning a switch off.</p>
+<p>We are not able to access, correct, export or delete your information on your behalf, because we cannot see it. That is a consequence of the design and not a refusal.</p>
+<p>You have the right to lodge a complaint with your local supervisory authority. In the United Kingdom that is the Information Commissioner’s Office; in the European Economic Area it is the authority in your country of residence.</p>
+<h2>Your rights in California</h2>
+<p>Under the California Consumer Privacy Act as amended by the California Privacy Rights Act, California residents have the rights to know, delete, correct, and opt out of the sale or sharing of personal information, and not to be discriminated against for exercising them.</p>
+<p>For the twelve months preceding this version of the policy, and for the whole life of the application before it, we have collected no personal information from you, because information stays on your device. We have disclosed none for a business purpose. <strong>We have not sold personal information and have not shared it for cross-context behavioural advertising</strong>, and we do not have the capability to do either.</p>
+<p>We do not process sensitive personal information for purposes beyond those permitted without an opt-out, and we do not use or disclose it for inferring characteristics.</p>
+<p>The right to know and the right to delete are exercised through the application itself: the backup export is your copy of everything, and Delete everything is the deletion. We cannot act on a request about your data because we hold none of it and would have no way to find you if we did.</p>
+<p>We honour Global Privacy Control signals by construction: there is no sale or sharing for a browser signal to opt out of.</p>
+<p>You may designate an authorised agent to make a request, though as above there is nothing on our side for such a request to reach.</p>
+<h2>Your rights in other United States jurisdictions</h2>
+<p>Residents of Virginia, Colorado, Connecticut, Utah, Texas, Oregon, Montana, and other states with comprehensive privacy laws have rights of access, correction, deletion, portability, and opt-out of targeted advertising, sale, and profiling.</p>
+<p>Our answer is the same everywhere and for the same reason: we do not have your information, we do not sell it, we do not use it for targeted advertising, and we do not profile you. Access and portability are the backup export; deletion is Delete everything. Neither requires a request to us and neither can be refused.</p>
+<p>Where a law grants a right to appeal a refused request, there is no refusal to appeal, because there is no request for us to refuse.</p>
+<h2>International transfers</h2>
+<p>We do not transfer your information internationally, because we do not receive it. It stays on the device you are holding, in whatever country you are holding it.</p>
+<p>The optional requests described in the network section reach Apple, Google or Brave, each of which operates internationally under its own policies and transfer mechanisms. Those requests carry a store name, or the fact that you are signing in, and no wallet or usage information.</p>
+<h2>Children</h2>
+<p>Card Genie is a tool for people who hold credit cards and is not directed at children. It is not intended for anyone under 13, and in jurisdictions where the age of digital consent is higher, not for anyone under that age.</p>
+<p>We do not knowingly collect personal information from children, and in practice we do not knowingly collect personal information from anyone, since none of it reaches us. If you believe a child has used the application and you want their information removed, the answer is the same as for anyone: it is on the device, and Delete everything or uninstalling removes it.</p>
+<h2>Do Not Track and Global Privacy Control</h2>
+<p>The application does not track you, so there is nothing for a Do Not Track header or a Global Privacy Control signal to change. We state this rather than staying silent because some jurisdictions require a disclosure of how such signals are handled, and “we honour them because there is nothing to honour” is the accurate answer.</p>
+<h2>Third-party services</h2>
+<p>The application can, in the circumstances described above, interact with Apple, Google and Brave Search. It integrates no other third-party service. It contains no software development kit belonging to an advertiser, analytics company, attribution vendor, social network or data broker.</p>
+<p>Where the application links to an issuer’s own page so you can read a card’s terms, that opens in your browser and is a normal visit to that company’s website, governed by their policy and not by this one.</p>
+<h2>Permissions</h2>
+<p>The application requests no device permissions: no location, camera, contacts, photos, microphone, calendar, notifications, health data, or Bluetooth. It requests no App Tracking Transparency permission because it does not track.</p>
+<p>If your operating system ever shows you a permission prompt for this application other than the standard system sign-in sheet, treat it as a bug and report it.</p>
+<h2>Accuracy of card information, and what that has to do with privacy</h2>
+<p>Card earning rates are entered by hand from each issuer’s own terms page, dated, and re-checked daily by an automated process that flags pages which have changed for a person to read. Issuers reprice without notice; a rate can be wrong or out of date.</p>
+<p>This belongs in a privacy policy because of what it implies about design: the application knows which cards you hold and nothing about what you actually spend, and it stays that way deliberately. A version that read your statements could be more accurate and would require exactly the kind of data collection this document exists to say we do not do.</p>
+<p>Nothing in the application is financial advice. See the Terms of Use.</p>
+<h2>Changes to this policy</h2>
+<p>This document lives in the repository beside the code it describes and is changed in the same commit as any feature that alters what the application stores or sends. An automated test fails the build if the application gains the ability to make a network request this policy does not describe.</p>
+<p>The version at the top tells you which one you are reading. Material changes will be reflected in a new version and, where a change would alter what happens to information already on your device, the application will say so before the change takes effect.</p>
+<p>Because we hold nothing, we cannot notify you by email that this policy has changed; we have no address for you.</p>
+<h2>Contact</h2>
+<p>Questions, corrections, or a report that something in this document is inaccurate: open an issue at github.com/shahp-08/card-genie.</p>
+<p>If you are a data protection authority or a regulator and need a response, the same address reaches the person responsible.</p>
+<nav><a href="./terms.html">Terms of Use</a> · <a href="./">Home</a></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Card Genie</title>
+<meta name="description" content="Card Genie tells you which of the cards you already carry earns the most on a purchase. It runs on your device.">
+<meta name="color-scheme" content="dark">
+<style>
+  :root {
+    --bg: #0B1017; --surface: #131A24; --line: #26303F;
+    --text: #EDF1F6; --muted: #9AA7B8; --faint: #66748A; --foil: #D9B36C;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--muted);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+  .brand { display: flex; align-items: center; gap: .6rem; font-size: .95rem; color: var(--foil); text-decoration: none; letter-spacing: .01em; }
+  h1 { color: var(--text); font-size: 2rem; line-height: 1.2; margin: 1.75rem 0 .5rem; letter-spacing: -.02em; }
+  .effective { color: var(--faint); font-size: .85rem; margin: 0; }
+  h2 { color: var(--text); font-size: 1.1rem; line-height: 1.35; margin: 2.75rem 0 .75rem; letter-spacing: -.01em; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1.25rem; padding: 1rem 1.25rem 1rem 2.25rem; background: var(--surface); border-radius: .6rem; list-style: none; }
+  li { position: relative; margin: 0 0 .75rem; }
+  li:last-child { margin-bottom: 0; }
+  li::before { content: "•"; color: var(--foil); position: absolute; left: -1rem; }
+  strong { color: var(--text); font-weight: 600; }
+  nav { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-size: .875rem; }
+  nav a { color: var(--faint); }
+  a { color: var(--foil); }
+  @media (max-width: 30rem) { .wrap { padding: 2rem 1.25rem 4rem; } h1 { font-size: 1.6rem; } }
+
+  .lead { color: var(--text); font-size: 1.25rem; line-height: 1.5; margin: 0 0 1.5rem; }
+  .points { list-style: none; padding: 0; background: none; margin: 2rem 0; }
+  .points li { padding-left: 1.25rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><span class="brand">✦ Card Genie</span></header>
+<h1>Which card should you use?</h1>
+<p class="lead">Card Genie tells you which of the cards you already carry earns the most on the thing you are about to buy.</p>
+<ul class="points">
+  <li>Rates are read off each issuer's own terms page by a person, and dated. Pages are re-checked every day, and the ones that change are read again.</li>
+  <li>It runs entirely on your device. There is no server, no account required, and no card number is ever asked for.</li>
+  <li>Where an issuer's terms cannot be verified, the card carries no rates at all rather than a plausible guess.</li>
+</ul>
+<nav><a href="./privacy.html">Privacy Policy</a> · <a href="./terms.html">Terms of Use</a> · <a href="./overrides.json">Kill-switch feed</a></nav>
+</div>
+</body>
+</html>

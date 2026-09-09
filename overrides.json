@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "updatedOn": "2026-09-08",
+  "disabledCards": [],
+  "disabledRules": [
+    {
+      "cardId": "chase-sapphire-reserve",
+      "id": "csr-lyft",
+      "reason": "The 5x Lyft offer ran through 30 September 2027.",
+      "since": "2027-10-01"
+    },
+    {
+      "cardId": "chase-sapphire-preferred",
+      "id": "csp-lyft",
+      "reason": "The 5x Lyft offer ran through 30 September 2027.",
+      "since": "2027-10-01"
+    },
+    {
+      "cardId": "chase-sapphire-reserve",
+      "id": "csr-peloton",
+      "reason": "The 10x Peloton offer ran through 31 December 2027.",
+      "since": "2028-01-01"
+    },
+    {
+      "cardId": "chase-sapphire-preferred",
+      "id": "csp-peloton",
+      "reason": "The 5x Peloton offer ran through 31 December 2027.",
+      "since": "2028-01-01"
+    }
+  ],
+  "disabledMerchants": [],
+  "disabledIssuers": [],
+  "disabledDatasetVersions": [],
+  "quarantinedCards": []
+}
