@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Card Genie — Privacy Policy</title>
-<meta name="description" content="Privacy Policy for Card Genie. Version 2026-09-09.">
+<meta name="description" content="Privacy Policy for Card Genie. Version 2026-09-10.">
 <meta name="color-scheme" content="dark">
 <style>
   :root {
@@ -39,13 +39,14 @@
 <div class="wrap">
 <header><a class="brand" href="./">✦ Card Genie</a></header>
 <h1>Privacy Policy</h1>
-<p class="effective">Version 2026-09-09. Effective on the date of first store release.</p>
+<p class="effective">Version 2026-09-10. Effective on the date of first store release.</p>
 <h2>The short version</h2>
-<p>Card Genie runs on your device. We do not run a server that stores anything about you, and there is no account on any machine of ours to hold.</p>
-<p>Your cards, your questions and your answers stay on your phone. Signing in is optional, changes none of that, and exists so the app can greet you by name and so you can move your wallet to a new phone.</p>
+<p>Card Genie runs on your device. We do not run a server that stores anything about your cards or your questions, and the only account that can exist anywhere else is an email sign-in, if that is the way in you choose, which holds a name and an address and nothing about your wallet.</p>
+<p>Your cards, your questions and your answers stay on your phone. You sign in once — with Apple, Google or an email address — so the app can greet you by name and so you can move your wallet to a new phone; signing in changes nothing about where your information lives.</p>
 <p>We never ask for a card number, and there is no field in the app for one.</p>
 <p>We do not sell your information, share it for advertising, build a profile of you, or track you across other apps and websites. Those are not policy positions we could quietly reverse; there is no code in the app capable of any of them.</p>
-<p>The rest of this document is the detail behind those four paragraphs, written out at the length the subject deserves. Nothing later contradicts anything here.</p>
+<p>If you choose to, you can send us anonymous usage counts together with the answers you pick in the welcome questions on first launch. That is the only information that ever reaches us; it carries no name, no email address and no account identifier, and it is off unless you turn it on.</p>
+<p>The rest of this document is the detail behind those five paragraphs, written out at the length the subject deserves. Nothing later contradicts anything here.</p>
 <h2>Who this policy is from, and what it covers</h2>
 <p>Card Genie is an independent application. This policy is written by the person who makes it and describes the behaviour of the Card Genie mobile application on iOS and Android, and of the browser build of the same application.</p>
 <p>It covers what the application does on your device and what it sends over a network. It does not cover, and cannot cover, what Apple, Google, or any other company does with information you give them directly — including when you sign in with an account they hold. Those relationships are between you and them, under their own policies, and are described here only so you can see where the boundary is.</p>
@@ -61,6 +62,8 @@
 <li>Recent questions: the last 20 things you asked, with the answer’s card name and value, so the For You screen can show them.</li>
 <li>Diagnostics, if enabled: a short log of application errors with amounts, quoted text, merchant names, email addresses and long digit runs removed before they are written, and a buffer of usage events containing counts and catalog identifiers only.</li>
 <li>A cached copy of the kill-switch list described below, which is public information identical for every user and says nothing about you.</li>
+<li>Your welcome answers: which options you picked in the short questionnaire shown on first launch — how you heard about the app, why you downloaded it, roughly how many cards you carry, how you choose a card today, and an age band. Only the option identifiers are stored, never free text, because there is nowhere in that questionnaire to type any.</li>
+<li>A random installation identifier, generated on the device, whose only job is to label anonymous usage statistics if you choose to send them. It is not derived from your device, your account or anything about you, it is shown in Diagnostics, and Delete everything discards it.</li>
 </ul>
 <h2>What the app never stores</h2>
 <p>This list is exhaustive and structural rather than aspirational. There is no screen that asks for any of it, no field in any stored record that could hold it, and the backup export refuses to write anything whose field name resembles one.</p>
@@ -68,6 +71,7 @@
 <li>Card numbers, in full or in part. The app identifies cards by product name and could not use a number if you gave it one.</li>
 <li>Expiry dates, security codes, CVV or CVC values, or PINs.</li>
 <li>Bank usernames, passwords, or any credential for any financial institution.</li>
+<li>The password for an email sign-in. It is sent once, over an encrypted connection, to the sign-in service that checks it, and there is no field in the application in which to keep it.</li>
 <li>Statements, transactions, balances, or any data from your bank. The app has no bank connection and no mechanism to obtain one.</li>
 <li>Authentication tokens from any sign-in provider. The record we keep of a sign-in has fields for the provider, an opaque identifier, a name, an email address and a date, and nothing else; anything further a provider returns is discarded before it reaches storage.</li>
 <li>Your location, at any precision. The app requests no location permission.</li>
@@ -76,11 +80,12 @@
 <li>Biometric data of any kind.</li>
 </ul>
 <h2>Signing in</h2>
-<p>Signing in is entirely optional and every feature of the application works without it. If you never sign in, nothing in this section applies to you.</p>
-<p>When you choose to sign in, we ask Apple or Google to confirm who you are. They hand back an identifier that is unique to you and to this application and is meaningless anywhere else, along with whatever name and email address you chose to share at that moment. We keep those on your device.</p>
+<p>The application asks you to sign in with Apple, Google or an email address before you use it. Signing in proves who you are to that provider and nothing more: it creates no account of ours holding your cards, and it changes nothing about where your information lives. In a build with no sign-in provider configured, the application lets you in without one.</p>
+<p>When you choose to sign in, we ask Apple, Google or — if you pick email — Firebase Authentication, a sign-in service operated by Google LLC, to confirm who you are. They hand back an identifier that is unique to you and to this application and is meaningless anywhere else, along with whatever name and email address you chose to share at that moment. We keep those on your device.</p>
 <p>We never receive an authentication token, and the application has no code that could store one. In the Google flow, a token is used to make a single request for your name, email address and identifier, and is discarded immediately afterwards; it is never written to storage. In the Apple flow the identity token and authorization code are ignored outright, because they exist for a server to verify and there is no server here.</p>
-<p>No sign-in information is sent to us, because there is no “us” to send it to. Your sign-in is a relationship between you and Apple or Google, governed by their privacy policies. Apple’s “Hide My Email” is fully supported: if you use it, we receive a relay address and never learn your real one, and the application works identically either way.</p>
-<p>Signing out removes the identifier and the provider’s name and email from your device while keeping your cards, your typed name and your preferences. It is not the same as deleting, which is described below.</p>
+<p>Signing in with an email address and password works like this. The name, address and password you type are sent, once and over an encrypted connection, to Firebase Authentication, which creates or checks the account and returns an account identifier. The application keeps the identifier, the name and the address on your device and keeps nothing else: the password is never written anywhere by the application, and the session token the service returns is held in memory only while the “verify your email” step is on screen — to put your name on the account, to ask the service whether you have followed the link in the verification email, and to send that email again — and is discarded when you continue; it is never written to storage. An email sign-in does not complete until the address is verified. Firebase Authentication keeps its own record of the account — the name, the address, a salted hash of the password, and the dates it was created and last used — under Google’s privacy policy. “Forgot password?” asks the service to send you a reset email; the application never sees the new password either.</p>
+<p>No sign-in information is sent to us, because there is no “us” to send it to. Your sign-in is a relationship between you and Apple, Google or Firebase Authentication, governed by their privacy policies. Apple’s “Hide My Email” is fully supported: if you use it, we receive a relay address and never learn your real one, and the application works identically either way.</p>
+<p>Signing out removes the identifier and the provider’s name and email from your device while keeping your cards, your typed name and your preferences; you are asked to sign in again the next time you open the application. It is not the same as deleting, which is described below.</p>
 <p>We do not use a sign-in to link you across devices, because we have nowhere to do that. Two devices signed into the same account do not know about each other.</p>
 <h2>Backups you make</h2>
 <p>You can export a backup file at any time, whether or not you have an account. It contains your wallet, your preferences and your profile name — which is to say, the list of which financial products you hold. It contains no card numbers, no credentials and no tokens, because none of those exist anywhere in the application.</p>
@@ -94,13 +99,14 @@
 <li>Store lookup (optional, and off unless the build includes a search key): when you name a store the application does not recognise, it may send the store name you typed — nothing else — to Brave Search to find out how that store is categorised. Not your amount, not your cards, not your question, not any identifier for you. The result is always shown to you as unconfirmed and you are asked to confirm it. Brave’s own privacy policy governs that request.</li>
 <li>Signing in with Apple (only when you tap it): handled by Apple’s own system sheet. The application receives the result; it does not send Apple anything about you beyond the fact that this application is asking.</li>
 <li>Signing in with Google (only when you tap it): opens Google’s sign-in page in a browser, then makes two requests to Google — one to exchange the authorization code for a token, one to read your name, email address and account identifier. Both go to Google and nowhere else. No information about your cards, your questions or your usage is included in either.</li>
-<li>Usage statistics (optional, off by default, and no collector exists in the released application): if a collector address is ever configured and you turn the switch on, the application posts aggregated counts only — never individual events, never what you typed, which store, or how much.</li>
+<li>Signing in with an email address (only when you use it): up to five requests to Firebase Authentication, at identitytoolkit.googleapis.com — to create or check the account, to put your name on it, to send a verification or password-reset email, to ask whether the address has been verified, and to delete the account when you ask for that. Each carries the address and, where the request needs it, the name, the password or a short-lived token for that one request. Nothing about your cards, your questions or your usage is included in any of them.</li>
+<li>Usage statistics (only in a build with a collector key; on from the moment you finish the welcome questions on first launch, and Diagnostics turns them off or back on): the application periodically posts a snapshot of aggregated counts — how many questions were asked, answered and marked helpful, how far you got through setup, how many days you have opened it, and which welcome answers you picked — to PostHog, an analytics service, labelled with the random installation identifier described above. Never individual events, never what you typed, which store, how much, a card number, your name, your email address or your account identifier.</li>
 </ul>
-<p>The application loads no remote fonts, images, scripts, stylesheets or advertising. It contains no analytics SDK, no advertising SDK, no attribution SDK, no crash-reporting service and no tag manager. It does not contact a language-model provider: the parser and the sentences it writes are rules and templates running offline on your device.</p>
+<p>The application loads no remote fonts, images, scripts, stylesheets or advertising. It contains no analytics SDK, no advertising SDK, no attribution SDK, no crash-reporting service and no tag manager: the usage snapshot above is a plain request the application writes itself, which is why this policy can say exactly what is in it. It does not contact a language-model provider: the parser and the sentences it writes are rules and templates running offline on your device.</p>
 <h2>What we do not do</h2>
 <p>Stated plainly, because most policies bury these and because in this case each is a statement about code that does not exist rather than a promise about behaviour we could change quietly.</p>
 <ul>
-<li>We do not sell your personal information, and never have. We have no mechanism to do so and no relationship with any data broker, advertiser or analytics vendor.</li>
+<li>We do not sell your personal information, and never have. We have no mechanism to do so and no relationship with any data broker or advertiser. The one analytics service we use, described above, receives aggregated counts and questionnaire answers under a random identifier, and nothing that identifies you.</li>
 <li>We do not share your personal information for cross-context behavioural advertising, and we do not serve advertising of any kind.</li>
 <li>We do not build a profile of you, score you, or make any automated decision that produces a legal or similarly significant effect. The application ranks your own cards for a purchase you describe, on your device, and that is the whole of it.</li>
 <li>We do not track you across other applications or websites, and the application requests no permission that would allow it.</li>
@@ -112,32 +118,33 @@
 <p>Under the General Data Protection Regulation, processing needs a lawful basis. Because the application processes your information on your own device and transmits none of it to us, our role as a controller is unusually narrow. Where the framework applies:</p>
 <ul>
 <li>Storing your wallet, preferences and history on your device: necessary for the performance of the service you asked for, under Article 6(1)(b). Without it the application cannot do the one thing it exists to do.</li>
-<li>Signing in, and keeping the identifier a provider returns: your consent, under Article 6(1)(a), given by tapping the button. It is optional, it can be withdrawn by signing out, and withdrawing it costs you no functionality.</li>
+<li>Signing in, keeping the identifier a provider returns, and an email sign-in account at Firebase Authentication where that is your way in: necessary to provide the application as designed, under Article 6(1)(b), since the application asks for a sign-in before use. The identifier is removed by signing out and the account is deleted from inside the application.</li>
 <li>The store lookup, in builds where it is enabled: our legitimate interest in identifying how a merchant is categorised, under Article 6(1)(f), balanced by sending only the store name and no identifier for you.</li>
-<li>Usage statistics, if a collector ever exists and you switch them on: your consent, under Article 6(1)(a), given by that switch and withdrawn by turning it off.</li>
+<li>Usage statistics and welcome answers, in builds with a collector: our legitimate interest in understanding how the application is found and used, under Article 6(1)(f), balanced by the fact that they carry no name, address or account identifier — only counts and answers under a random installation label — and by the switch in Diagnostics, which turns them off.</li>
 </ul>
 <p>We do not process special categories of personal data under Article 9, and we do not carry out automated decision-making within the meaning of Article 22.</p>
 <h2>How long information is kept</h2>
 <p>Information stays on your device until you remove it, the application is uninstalled, or your device’s storage is cleared. There is no retention schedule of ours because there is no copy of ours.</p>
 <p>Recent questions are capped at the last 20 and older ones fall off automatically. Typed offers and merchant reports are capped in number, and the oldest are dropped when the cap is reached. Diagnostics are a short rolling buffer.</p>
-<p>We keep nothing after you delete it, because we never had it. If you sign in, Apple or Google keep their own record that you used this application to sign in; ending that is a matter for their account settings, and both provide a way to revoke an application’s access.</p>
+<p>We keep nothing on the device after you delete it, because we never had a copy. If you sign in with Apple or Google, they keep their own record that you used this application to sign in; ending that is a matter for their account settings, and both provide a way to revoke an application’s access. An email sign-in account exists at Firebase Authentication until you delete it from the Account screen, which deletes it there as well.</p>
+<p>Usage statistics you chose to send are held in our PostHog project under the random installation identifier for as long as they are useful for improving the application and for no more than two years, after which they are deleted.</p>
 <h2>Security</h2>
 <p>Your information sits in the application’s private storage, protected by the operating system’s own sandboxing and by whatever device encryption and lock screen you have enabled. On a modern iPhone or Android device with a passcode set, that is meaningful protection; on a device with no lock and no encryption, it is not, and the same is true of every application on it.</p>
 <p>Every network request the application makes is over HTTPS. The application declares no cleartext-traffic exception on either platform.</p>
-<p>The most substantial security property of this application is architectural rather than technical: we hold nothing, so there is no database of ours to breach, no credential of yours for anyone to steal from us, and no incident we could have that would expose your information. No amount of security engineering on a server is as protective as not having one.</p>
+<p>The most substantial security property of this application is architectural rather than technical: we hold nothing about your cards or your questions, so there is no database of ours to breach for them, no card credential of yours for anyone to steal from us, and no incident we could have that would expose your wallet. No amount of security engineering on a server is as protective as not having one. The two things that can exist elsewhere — an email sign-in account at Firebase Authentication, and anonymous usage counts at PostHog — are described above, and neither contains anything about your cards.</p>
 <p>No system is perfectly secure. If you find a vulnerability, please report it as described in the project’s SECURITY document rather than disclosing it publicly first.</p>
 <h2>Your choices</h2>
 <ul>
-<li>Use the application without an account. Nothing is withheld from you if you do.</li>
+<li>Choose the way in that shares least: Sign in with Apple, with “Hide My Email”, gives us a relay address and nothing else.</li>
 <li>Sign out at any time from the Account screen, which removes the provider identifier from your device.</li>
-<li>Turn usage statistics on or off in Diagnostics. They are off by default.</li>
+<li>Turn usage statistics off in Diagnostics, or back on.</li>
 <li>Export a backup before you delete anything, if you want to keep your own copy.</li>
 <li>Delete everything from inside the application, as described below.</li>
 <li>Uninstall. On iOS and Android that removes the application’s private storage with it.</li>
 </ul>
 <h2>Deleting your information</h2>
 <p>Account → Delete everything removes all of it: your account, your wallet, your offers, your history, your merchant reports and your diagnostics. It happens immediately, on the device, because the device is the only place any of it is.</p>
-<p>There is no request to make, no queue to wait in, and nothing of yours left with us afterwards. We mention that not to boast but because “we will delete your data within 30 days” is the sentence most applications have to write here, and it is not true of this one.</p>
+<p>For everything on the device there is no request to make and no queue to wait in. Two things can exist elsewhere, and are handled as follows. An email sign-in account is deleted at Firebase Authentication as part of Delete everything; the screen asks for your password to do it, because the application holds nothing else that could prove the request is yours. Usage statistics you chose to send are held under a random identifier that Delete everything discards, so nothing that remains can be connected to you or to a new installation; if you want them removed as well, contact us with the installation identifier shown in Diagnostics and we will delete them.</p>
 <p>Uninstalling the application does the same thing. In the browser build, clearing site data for the application’s origin does the same thing.</p>
 <p>If you signed in, revoking this application’s access in your Apple ID or Google account settings ends that relationship on their side as well.</p>
 <h2>Your rights in the European Economic Area, the United Kingdom and Switzerland</h2>
@@ -147,7 +154,7 @@
 <p>You have the right to lodge a complaint with your local supervisory authority. In the United Kingdom that is the Information Commissioner’s Office; in the European Economic Area it is the authority in your country of residence.</p>
 <h2>Your rights in California</h2>
 <p>Under the California Consumer Privacy Act as amended by the California Privacy Rights Act, California residents have the rights to know, delete, correct, and opt out of the sale or sharing of personal information, and not to be discriminated against for exercising them.</p>
-<p>For the twelve months preceding this version of the policy, and for the whole life of the application before it, we have collected no personal information from you, because information stays on your device. We have disclosed none for a business purpose. <strong>We have not sold personal information and have not shared it for cross-context behavioural advertising</strong>, and we do not have the capability to do either.</p>
+<p>For the twelve months preceding this version of the policy, and for the whole life of the application before it, the only personal information that can reach us is an email address you choose to sign in with (held by Firebase Authentication) and anonymous usage counts under a random identifier (held by PostHog), each disclosed to that service provider for the business purpose of providing the service. <strong>We have not sold personal information and have not shared it for cross-context behavioural advertising</strong>, and we do not have the capability to do either.</p>
 <p>We do not process sensitive personal information for purposes beyond those permitted without an opt-out, and we do not use or disclose it for inferring characteristics.</p>
 <p>The right to know and the right to delete are exercised through the application itself: the backup export is your copy of everything, and Delete everything is the deletion. We cannot act on a request about your data because we hold none of it and would have no way to find you if we did.</p>
 <p>We honour Global Privacy Control signals by construction: there is no sale or sharing for a browser signal to opt out of.</p>
@@ -158,14 +165,14 @@
 <p>Where a law grants a right to appeal a refused request, there is no refusal to appeal, because there is no request for us to refuse.</p>
 <h2>International transfers</h2>
 <p>We do not transfer your information internationally, because we do not receive it. It stays on the device you are holding, in whatever country you are holding it.</p>
-<p>The optional requests described in the network section reach Apple, Google or Brave, each of which operates internationally under its own policies and transfer mechanisms. Those requests carry a store name, or the fact that you are signing in, and no wallet or usage information.</p>
+<p>The optional requests described in the network section reach Apple, Google (including Firebase Authentication), Brave or PostHog, each of which operates internationally under its own policies and transfer mechanisms; Firebase Authentication and PostHog process what they receive in the United States. Those requests carry a store name, the fact that you are signing in and the address you sign in with, or anonymous usage counts under a random identifier — and no wallet information.</p>
 <h2>Children</h2>
 <p>Card Genie is a tool for people who hold credit cards and is not directed at children. It is not intended for anyone under 13, and in jurisdictions where the age of digital consent is higher, not for anyone under that age.</p>
-<p>We do not knowingly collect personal information from children, and in practice we do not knowingly collect personal information from anyone, since none of it reaches us. If you believe a child has used the application and you want their information removed, the answer is the same as for anyone: it is on the device, and Delete everything or uninstalling removes it.</p>
+<p>We do not knowingly collect personal information from children, and the little that can reach us from anyone — an email address used to sign in, or anonymous usage counts — is described above. If you believe a child has used the application and you want their information removed, the answer is the same as for anyone: it is on the device, and Delete everything or uninstalling removes it; if a child created an email sign-in, contact us and we will delete it at the sign-in service.</p>
 <h2>Do Not Track and Global Privacy Control</h2>
 <p>The application does not track you, so there is nothing for a Do Not Track header or a Global Privacy Control signal to change. We state this rather than staying silent because some jurisdictions require a disclosure of how such signals are handled, and “we honour them because there is nothing to honour” is the accurate answer.</p>
 <h2>Third-party services</h2>
-<p>The application can, in the circumstances described above, interact with Apple, Google and Brave Search. It integrates no other third-party service. It contains no software development kit belonging to an advertiser, analytics company, attribution vendor, social network or data broker.</p>
+<p>The application can, in the circumstances described above, interact with Apple, Google (including Firebase Authentication), Brave Search and PostHog. It integrates no other third-party service. It contains no software development kit belonging to an advertiser, analytics company, attribution vendor, social network or data broker: each of those interactions is a plain request the application writes itself.</p>
 <p>Where the application links to an issuer’s own page so you can read a card’s terms, that opens in your browser and is a normal visit to that company’s website, governed by their policy and not by this one.</p>
 <h2>Permissions</h2>
 <p>The application requests no device permissions: no location, camera, contacts, photos, microphone, calendar, notifications, health data, or Bluetooth. It requests no App Tracking Transparency permission because it does not track.</p>
